@@ -1,3 +1,10 @@
+.primary-layout {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .navbar {
   list-style-type: none;
   display: flex;
@@ -7,4 +14,12 @@
 .nav-link {
   text-decoration: none;
   padding: 10px;
+}
+
+.nav-link:hover {
+  font-weight: bold;
+}
+
+.active-nav-link {
+  font-weight: bold;
 }
