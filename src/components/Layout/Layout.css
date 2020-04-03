@@ -1,0 +1,10 @@
+.navbar {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.nav-link {
+  text-decoration: none;
+  padding: 10px;
+}
