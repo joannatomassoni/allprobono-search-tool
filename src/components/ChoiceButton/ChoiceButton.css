@@ -1,5 +1,13 @@
 .choice-btn {
-  padding: 50px;
-  margin: 20px;
-  font-size: 30px;
+  padding: 3rem;
+  margin: 1rem;
+  font-size: 2rem;
+  color: rgb(1, 92, 104);
+  background-color: rgb(217, 250, 237);
+}
+
+@media screen and (max-width: 1000px) {
+  .choice-btn { 
+    /* border: 2px solid; */
+  }
 }

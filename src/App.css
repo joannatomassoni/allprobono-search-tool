@@ -1,0 +1,45 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 1.5rem;
+  align-content: center;
+}
+
+.current-question {
+  margin: 0 auto;
+  padding: 1rem;
+  font-size: 1.75rem;
+  font-weight: 500
+}
+
+.choices-container {
+  width: 100%
+}
+
+.back-arrow {
+  display: flex;
+  justify-content: center;
+  width: 15%;
+  padding: 1rem;
+  margin: 1.5rem 0 0 0;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: rgb(244, 238, 247);
+  color: rgb(53, 27, 146)
+}
+
+.back-arrow div {
+  color: rgb(53, 27, 146);
+  font-size: 1rem;
+  font-weight: 700;
+  margin: .25rem 0 0 .5rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .back-arrow { width: 50% }
+}
+
+

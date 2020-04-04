@@ -1,4 +1,5 @@
 import React from "react";
+import './App.css'
 import Layout from './components/Layout'
 import ChoiceButton from './components/ChoiceButton'
 import QAMap from './QAMap'
@@ -43,15 +44,15 @@ class App extends React.Component {
     
     return (
       <div className='App'>
-        <Layout>
-          <div>{currentQuestion}</div>
-          {currentChoices.map((choice) => {
-            return (
-              <ChoiceButton key={choice} text={choice} handleButtonClick={this.handleButtonClick}/>
-            )
-          })}
-          <button onClick={this.handleBackArrowClick}>&larr;</button>
-        </Layout>
+          <div className='current-question'>{currentQuestion}</div>
+          <div className='choices-container'>
+            {currentChoices.map((choice) => {
+              return (
+                <ChoiceButton key={choice} text={choice} handleButtonClick={this.handleButtonClick}/>
+              )
+            })}
+          </div>
+          <button className='back-arrow' onClick={this.handleBackArrowClick}>&larr; <div>Back</div></button>
       </div>
     )
   }
