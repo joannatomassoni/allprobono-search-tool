@@ -7,29 +7,50 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      currentQuestion: 'Are you interested in donating, or do you need funding?',
-      currentChoices: ['Looking for funding', 'Looking to donate']
+      currentQuestion: 'Do you need funding, or are you looking to donate?',
+      currentChoices: ['Looking for funds', 'Looking to donate'],
+      answers: new Map(),
+      counter: 0
     }
   }
 
-  handleButtonClick = (nextQ) => {
+  handleButtonClick = (buttonText) => {
+    let { answers, counter, currentQuestion } = this.state;
     this.setState({
-      currentQuestion: QAMap.get(nextQ),
-      currentChoices: QAMap.get(this.state.currentQuestion)
+      answers: answers.set(currentQuestion, buttonText),
+      counter: counter + 1,
+      currentQuestion: QAMap.get(buttonText),
+      currentChoices: QAMap.get(QAMap.get(buttonText)),
     })
   }
 
+  handleBackArrowClick = () => {
+    let { answers, counter } = this.state;
+    const answersArray = [...answers.keys()]
+    console.log(answersArray);
+    if (counter) {
+      // set current question to the previous one in the array and decrement counter
+      this.setState({
+        currentQuestion: answersArray[counter - 1],
+        currentChoices: QAMap.get(answersArray[counter - 1]),
+        counter: counter - 1
+      })
+    }
+  }
+
   render() {
-    const { currentQuestion, currentChoices } = this.state;
+    const { currentQuestion, currentChoices} = this.state;
+    
     return (
       <div className='App'>
         <Layout>
           <div>{currentQuestion}</div>
           {currentChoices.map((choice) => {
             return (
-              <ChoiceButton text={choice} handleButtonClick={this.handleButtonClick}/>
+              <ChoiceButton key={choice} text={choice} handleButtonClick={this.handleButtonClick}/>
             )
           })}
+          <button onClick={this.handleBackArrowClick}>&larr;</button>
         </Layout>
       </div>
     )
