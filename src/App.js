@@ -1,8 +1,10 @@
 import React from "react";
 import './App.css'
-import Layout from './components/Layout'
+// import Layout from './components/Layout'
 import ChoiceButton from './components/ChoiceButton'
+import Results from './components/Results'
 import QAMap from './QAMap'
+import testData from './testData'
 
 class App extends React.Component {
   constructor() {
@@ -11,7 +13,7 @@ class App extends React.Component {
       currentQuestion: 'Do you need funding, or are you looking to donate?',
       currentChoices: ['Looking for funds', 'Looking to donate'],
       answers: new Map(),
-      counter: 0
+      counter: 0,
     }
   }
 
@@ -28,7 +30,6 @@ class App extends React.Component {
   handleBackArrowClick = () => {
     let { answers, counter } = this.state;
     const answersArray = [...answers.keys()]
-    console.log(answersArray);
     if (counter) {
       // set current question to the previous one in the array and decrement counter
       this.setState({
@@ -42,19 +43,27 @@ class App extends React.Component {
   render() {
     const { currentQuestion, currentChoices} = this.state;
     
-    return (
-      <div className='App'>
-          <div className='current-question'>{currentQuestion}</div>
-          <div className='choices-container'>
-            {currentChoices.map((choice) => {
-              return (
-                <ChoiceButton key={choice} text={choice} handleButtonClick={this.handleButtonClick}/>
-              )
-            })}
-          </div>
-          <button className='back-arrow' onClick={this.handleBackArrowClick}>&larr; <div>Back</div></button>
-      </div>
-    )
+    if (currentChoices) {
+      return (
+        <div className='App'>
+            <div className='current-question'>{currentQuestion}</div>
+            <div className='choices-container'>
+              {currentChoices.map((choice) => {
+                return (
+                  <ChoiceButton key={choice} text={choice} handleButtonClick={this.handleButtonClick}/>
+                )
+              })}
+            </div>
+            <button className='back-arrow' onClick={this.handleBackArrowClick}>&larr; <div>Back</div></button>
+        </div>
+      )
+    } else {
+      return (
+        <div className='App'>
+          <Results results={testData}/>
+        </div>
+      )
+    }
   }
 }
 export default App
