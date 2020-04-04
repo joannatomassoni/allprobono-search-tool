@@ -8,10 +8,13 @@ const QAMap = new Map([
   ['No', 'How much money are you trying to donate?'],
   ['How much money are you trying to donate?', ['Less than $500', 'Between $500 and $10,000', '$10,000 or more']],
   ['Looking for funds', 'Are you non-profit or for-profit?'],
-  ['Are you non-profit or for-profit?', ['Non-profit', 'For-profit']],
   ['Less than $500', []],
   ['Between $500 and $10,000', []],
-  ['$10,000 or more', []]
+  ['$10,000 or more', []],
+  ['Are you non-profit or for-profit?', ['Non-profit', 'For-profit']],
+  ['Non-profit', 'Are you looking for grants or donations?'],
+  ['For-profit', 'Are you looking for grants or donations?'],
+  ['Are you looking for grants or donations?', ['Grants', 'Donations']],
 ]);
 
 export default QAMap;
