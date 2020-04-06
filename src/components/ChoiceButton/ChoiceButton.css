@@ -4,6 +4,13 @@
   font-size: 2rem;
   color: rgb(1, 92, 104);
   background-color: rgb(217, 250, 237);
+  border-radius: 5px;
+  box-shadow: 2px 1px 4px;
+}
+
+.choice-btn:hover {
+  background-color: rgb(185, 248, 223);
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
