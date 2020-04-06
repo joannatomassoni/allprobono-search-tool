@@ -3,7 +3,7 @@ import Modal from 'react-modal';
 import './ReactModal.css'
  
 // Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
-// Modal.setAppElement('#App')
+Modal.setAppElement('#root')
  
 const ReactModal = () => {
   let subtitle;
@@ -29,21 +29,19 @@ const ReactModal = () => {
           isOpen={modalIsOpen}
           onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
-          // style={customStyles}
           className='modal-container'
         >
  
-            <div className='modal-text'>
+            <div className='modal'>
                 <button className='close-btn' onClick={() => setIsOpen(false)}>
                   <div></div>
                 </button>
-                <div className='developer'>
-                <h4>Github pull request</h4>
-                <p>Make a pull request <a href='https://www.github.com/joannatomassoni/allprobono-search-tool' target='__blank'>here</a></p>
-              </div>
-              <div className='non-developer'>
-                <h4>Email</h4>
-                <p><a href='mailto:apb2020@gmail.com' target='__blank'>Email us</a></p>
+                <div className='modal-text'>
+                  <p>
+                    To contribute to our ongoing list of resources, you can <a href='https://www.github.com/joannatomassoni/allprobono-search-tool' el='nofollow noreferrer' target='__blank' title='Head to our Github repo'>make a pull request</a> in our Github repo. 
+                    <br/><br/> 
+                    Or just <a href='mailto:apb2020@gmail.com?subject=Request to add to database' rel='nofollow noreferrer' target='__blank' title='Email us'>email us</a> with the <em>name</em>, <em>website</em>, a <em>description</em> of your organization, and anything else you'd like us to know.
+                    </p>
               </div>
             </div>
         </Modal>

@@ -4,26 +4,26 @@
   left: 0;
   margin: 0;
   transition: all 0.4s ease;
-  top                   : '50%';
-  left                  : '50%';
-  right                 : 'auto';
-  bottom                : 'auto';
-  margin-right           : '-50%';
-  transform             : 'translate(-50%, -50%)'
+  top: '50%';
+  left: '50%';
+  right: 'auto';
+  bottom: 'auto';
+  margin-right: '-50%';
+  transform: 'translate(-50%, -50%)'
 }
 
 .open-btn {
   margin: 1rem;
   padding: 1rem;
   border-radius: 12px;
-  color: rgb(97, 64, 3);
+  color: rgba(1, 92, 104, 0.795);
   font-size: 1rem;
   font-weight: bold;
-  background-color: rgb(253, 253, 208);
+  background-color: rgba(231, 250, 242, 0.74);
 }
 
 .open-btn:hover {
-  background-color: rgb(248, 210, 140);
+  background-color: rgba(204, 250, 231, 0.74);
   cursor: pointer;
 }
 
@@ -58,26 +58,33 @@
   transform: rotate(-45deg);
 }
 
-.modal-text {
+.modal {
   position: fixed;
   top: 50%;
   left: 50%;
   margin: 0;
   padding: 2rem;
   width: 50vw;
-  height: 50%;
+  height: 25%;
   transform: translate(-50%,-50%);
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   background-color: white;
   box-shadow: 1px 2px 5px grey;
+  text-align: center;
 }
 
-.divider {
-  position:absolute;
-    left:50%;
-    top:10%;
-    bottom:10%;
-    border-left:1px solid white;
+.modal-text p a{
+  text-decoration: none;
+  color: rgb(5, 90, 86);
+  font-weight: 700;
 }
+
+.modal-text p a:hover{
+  /* font-style: italic; */
+  text-shadow: 0 0 1px #999;
+
+}
+
+
