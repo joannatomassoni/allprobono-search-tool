@@ -2,9 +2,15 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 85vh;
   padding: 1.5rem;
   align-content: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.main-content {
+  flex-grow: 1;
 }
 
 .current-question {
@@ -21,10 +27,11 @@
 .back-arrow {
   display: flex;
   justify-content: center;
-  width: 15%;
+  width: 20%;
   padding: 1rem;
-  margin: 1.5rem 0 0 0;
+  margin: 1rem auto;
   align-self: center;
+  align-items: center;
   font-size: 1.5rem;
   font-weight: 600;
   background-color: rgb(244, 238, 247);
@@ -35,7 +42,7 @@
   color: rgb(53, 27, 146);
   font-size: 1rem;
   font-weight: 700;
-  margin: .25rem 0 0 .5rem;
+  margin: 0 0 0 .5rem;
 }
 
 @media screen and (max-width: 1000px) {

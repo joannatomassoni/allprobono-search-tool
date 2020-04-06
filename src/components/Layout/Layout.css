@@ -1,25 +1,8 @@
 .primary-layout {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.navbar {
-  list-style-type: none;
+  margin: 0 auto;
+  text-align: center;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-.nav-link {
-  text-decoration: none;
-  padding: 10px;
-}
-
-.nav-link:hover {
-  font-weight: bold;
-}
-
-.active-nav-link {
-  font-weight: bold;
+  flex-direction: column;
+  min-height: 75vh;
+  padding: 1.5rem;
 }

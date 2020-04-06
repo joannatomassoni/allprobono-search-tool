@@ -1,10 +1,11 @@
-import React from "react";
+import React from 'react';
 import './App.css'
-// import Layout from './components/Layout'
+import Layout from './components/Layout'
 import ChoiceButton from './components/ChoiceButton'
 import Results from './components/Results'
 import QAMap from './QAMap'
 import testData from './testData'
+import ReactModal from './components/ReactModal'
 
 class App extends React.Component {
   constructor() {
@@ -14,6 +15,7 @@ class App extends React.Component {
       currentChoices: ['Looking for funds', 'Looking to donate'],
       answers: new Map(),
       counter: 0,
+      modalVisible: false
     }
   }
 
@@ -46,24 +48,32 @@ class App extends React.Component {
     if (currentChoices) {
       return (
         <div className='App'>
-            <div className='current-question'>{currentQuestion}</div>
-            <div className='choices-container'>
-              {currentChoices.map((choice) => {
-                return (
-                  <ChoiceButton key={choice} text={choice} handleButtonClick={this.handleButtonClick}/>
-                )
-              })}
-            </div>
-            <button className='back-arrow' onClick={this.handleBackArrowClick}>&larr; <div>Back</div></button>
+            <Layout>
+              <div main-content>
+                <div className='current-question'>{currentQuestion}</div>
+                <div className='choices-container'>
+                  {currentChoices.map((choice) => {
+                    return (
+                      <ChoiceButton key={choice} text={choice} handleButtonClick={this.handleButtonClick}/>
+                    )
+                  })}
+                </div>
+                <button className='back-arrow' onClick={this.handleBackArrowClick}>&larr; <div>Back</div></button>
+              </div>
+            </Layout>
+            <ReactModal/>
         </div>
       )
     } else {
       return (
         <div className='App'>
-          <Results results={testData}/>
+          <Layout>
+            <Results results={testData}/>
+          </Layout>
         </div>
       )
     }
   }
 }
+
 export default App
