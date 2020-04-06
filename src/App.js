@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'
 import Layout from './components/Layout'
 import ChoiceButton from './components/ChoiceButton'
+import BackButton from './components/BackButton'
 import Results from './components/Results'
 import QAMap from './QAMap'
 import testData from './testData'
@@ -58,7 +59,7 @@ class App extends React.Component {
                     )
                   })}
                 </div>
-                <button className='back-arrow' onClick={this.handleBackArrowClick}>&larr; <div>Back</div></button>
+                <BackButton handleBackArrowClick={this.handleBackArrowClick}/>
               </div>
             </Layout>
             <ReactModal/>
@@ -70,6 +71,7 @@ class App extends React.Component {
           <Layout>
             <Results results={testData}/>
           </Layout>
+          <ReactModal/>
         </div>
       )
     }
