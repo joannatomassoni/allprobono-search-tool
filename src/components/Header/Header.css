@@ -1,0 +1,31 @@
+.header {
+  /* background-color: rgb(167, 218, 198); */
+  /* background-color: #379681; */
+  background-color: #BDEAE0;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.header:hover {
+  background-color: rgb(132, 180, 161);
+}
+
+.header button {
+  border: none;
+  background: none;
+}
+
+.header button:hover {
+  cursor: pointer;
+  text-shadow: 0 0 2px #999;
+}
+
+.header button h2 {
+  font-size: 1.5rem;
+  /* color: rgb(42, 105, 95); */
+  color: #1E856E;
+  margin-right: 3rem;
+}

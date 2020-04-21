@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css'
-import Layout from './components/Layout'
 import ChoiceButton from './components/ChoiceButton'
 import BackButton from './components/BackButton'
 import Results from './components/Results'
 import QAMap from './QAMap'
 import testData from './testData'
 import ReactModal from './components/ReactModal'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 class App extends React.Component {
   constructor() {
@@ -43,35 +44,48 @@ class App extends React.Component {
     }
   }
 
+  handleHeaderClick = () => {
+    this.setState({
+      currentQuestion: 'Do you need funding, or are you looking to donate?',
+      currentChoices: ['Looking for funds', 'Looking to donate']
+    })
+  }
+
   render() {
     const { currentQuestion, currentChoices} = this.state;
     
     if (currentChoices) {
       return (
         <div className='App'>
-            <Layout>
-              <div main-content>
-                <div className='current-question'>{currentQuestion}</div>
-                <div className='choices-container'>
-                  {currentChoices.map((choice) => {
-                    return (
-                      <ChoiceButton key={choice} text={choice} handleButtonClick={this.handleButtonClick}/>
-                    )
-                  })}
-                </div>
-                <BackButton handleBackArrowClick={this.handleBackArrowClick}/>
+            <Header handleHeaderClick={this.handleHeaderClick}/>
+          <div className='main-content'>
+            <div className='question-container'>
+              <div className='current-question'>{currentQuestion}</div>
+              <div className='choices-container'>
+                {currentChoices.map((choice) => {
+                  return (
+                    <ChoiceButton key={choice} text={choice} handleButtonClick={this.handleButtonClick}/>
+                  )
+                })}
               </div>
-            </Layout>
-            <ReactModal/>
+              <BackButton handleBackArrowClick={this.handleBackArrowClick} currentQuestion={currentQuestion}/>
+            </div>
+          </div>
+          <ReactModal/>
+          {/* <Footer/> */}
         </div>
       )
     } else {
       return (
         <div className='App'>
-          <Layout>
+            <Header handleHeaderClick={this.handleHeaderClick}/>
+          <div className='main-content'>
             <Results results={testData}/>
-          </Layout>
+            <BackButton handleBackArrowClick={this.handleBackArrowClick} currentQuestion={currentQuestion}/>
+          </div>
+
           <ReactModal/>
+          {/* <Footer/> */}
         </div>
       )
     }

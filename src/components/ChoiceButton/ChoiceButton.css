@@ -1,7 +1,9 @@
 .choice-btn {
-  padding: 3rem;
+  padding: 2rem;
   margin: 1rem;
   font-size: 2rem;
+  /* background-color: rgb(192, 135, 135); */
+  /* color:  rgb(78, 26, 39); */
   color: rgb(1, 92, 104);
   background-color: rgb(217, 250, 237);
   border-radius: 5px;
@@ -10,11 +12,16 @@
 
 .choice-btn:hover {
   background-color: rgb(185, 248, 223);
+  /* background-color: rgb(194, 84, 84); */
   cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
   .choice-btn { 
     /* border: 2px solid; */
+    padding: 2rem;
+    margin: 1rem;
+    max-width: 85%;
+    font-size: 1.5rem;
   }
 }

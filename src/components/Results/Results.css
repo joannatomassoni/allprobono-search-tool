@@ -1,5 +1,9 @@
 .results-container {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 1rem auto;
+}
+
+.results-container h2 {
+  margin: .5rem auto;
 }

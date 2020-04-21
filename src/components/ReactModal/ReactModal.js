@@ -2,20 +2,13 @@ import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './ReactModal.css'
  
-// Make sure to bind modal to your appElement (http://reactcommunity.org/react-modal/accessibility/)
 Modal.setAppElement('#root')
  
 const ReactModal = () => {
-  let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const openModal = () => {
     setIsOpen(true);
-  }
- 
-  const afterOpenModal = () => {
-    // references are now sync'd and can be accessed.
-    // subtitle.style.color = '#f00';
   }
  
   const closeModal = () => {
@@ -27,7 +20,6 @@ const ReactModal = () => {
         <button onClick={openModal} className='open-btn'>Want to add your organization to our database?</button>
         <Modal
           isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           className='modal-container'
         >
