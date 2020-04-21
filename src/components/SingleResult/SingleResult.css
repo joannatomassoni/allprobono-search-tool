@@ -1,10 +1,11 @@
 .result-container {
   display: flex;
-  margin: .5rem .5rem;
+  margin: .5rem;
 }
 
 .result-item {
-  margin: .25rem
+  margin: .25rem;
+  padding: 1rem;
 }
 
 .name a {
@@ -15,4 +16,12 @@
 
 .name a:hover {
   font-weight: 800
+}
+
+.odd {
+  background-color: rgb(200, 248, 223);
+}
+
+.even {
+  background-color: rgb(200, 248, 246);
 }
