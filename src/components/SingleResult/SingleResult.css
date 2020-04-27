@@ -20,8 +20,9 @@
 
 .odd {
   background-color: rgb(200, 248, 223);
+
 }
 
 .even {
-  background-color: rgb(200, 248, 246);
+  background-color: #BDEAE0;
 }
