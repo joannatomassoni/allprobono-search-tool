@@ -4,10 +4,12 @@ import './BackButton.css'
 const BackButton = ({ handleBackArrowClick, currentQuestion }) => {
   if (currentQuestion !== 'Do you need funding, or are you looking to donate?') {
     return (
-      <button className='back-arrow' onClick={handleBackArrowClick}>&larr; <div>Back</div></button>
+      <button className='back-btn' onClick={handleBackArrowClick}>Back</button>
     )
   } else {
-    return null;
+    return (
+      <button className='back-btn' onClick={handleBackArrowClick}>   </button>
+    );
   }
 }
 
