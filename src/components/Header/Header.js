@@ -4,7 +4,8 @@ import './Header.css'
 const Header = ({ handleHeaderClick }) => {
   return (
     <div className='header'>
-      <button onClick={handleHeaderClick}><h2>COVID Financial Roadmap</h2></button>
+      <button onClick={handleHeaderClick}>COVID Financial Roadmap</button>
+      <div className='line'></div>
     </div>
     
   )

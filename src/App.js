@@ -57,7 +57,7 @@ class App extends React.Component {
     if (currentChoices) {
       return (
         <div className='App'>
-            <Header handleHeaderClick={this.handleHeaderClick}/>
+          <Header handleHeaderClick={this.handleHeaderClick}/>
           <div className='main-content'>
             <div className='question-container'>
               <div className='current-question'>{currentQuestion}</div>
@@ -81,8 +81,8 @@ class App extends React.Component {
             <Header handleHeaderClick={this.handleHeaderClick}/>
           <div className='main-content'>
             <Results results={testData}/>
-            <BackButton handleBackArrowClick={this.handleBackArrowClick} currentQuestion={currentQuestion}/>
           </div>
+            <BackButton handleBackArrowClick={this.handleBackArrowClick} currentQuestion={currentQuestion}/>
 
           <ReactModal/>
           {/* <Footer/> */}

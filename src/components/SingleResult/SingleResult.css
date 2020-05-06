@@ -1,11 +1,28 @@
 .result-container {
   display: flex;
+  flex-direction: column;
   margin: .5rem;
+  padding: 1rem;
+  width: 100%;
+
+  border: 1px solid #272727;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
 }
 
 .result-item {
   margin: .25rem;
-  padding: 1rem;
+  padding: .25rem;
+}
+
+.result-container:hover {
+  background-color: #8A0303;
+  color: white;
+}
+
+.name {
+  text-transform: uppercase;
 }
 
 .name a {
@@ -19,10 +36,10 @@
 }
 
 .odd {
-  background-color: rgb(200, 248, 223);
+  /* background-color: rgb(202, 201, 201); */
 
 }
 
 .even {
-  background-color: #BDEAE0;
+  /* background-color: rgba(250, 204, 204, 0.39) */
 }

@@ -1,49 +1,38 @@
 * {
-  margin: 0 auto;
   padding: 0;
 }
 
-body, html {
-  height: 100%;
-  width: 100%;
-  background-color: rgb(245, 252, 253);
+body, html, #root {
+  height: 100vh;
+  width: 100vw;
 }
 
 .App {
-  text-align: center;
-  margin: 0 auto;
-  align-content: center;
-  overflow: hidden;
-  /* display: flex;
-  flex-direction: column;
-  margin: 0 auto;
-  align-content: center;
-  min-height: 90vh;
-  position: relative; 
-  */
-  justify-content: center;
   position: relative;
-  height: 100vh;
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 8% 80% 1fr;
+  height: 100%;
+
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .main-content {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   margin-top: 1rem;
   flex-grow: 1;
+  overflow: scroll;
 }
 
 .question-container {
   display: flex;
   flex-direction: column;
   position: absolute;
-  /* background-color: rgb(235, 236, 236); */
-  /* background-color: rgb(250, 246, 236); */
   border-radius: 45px;
   justify-content: center;
   margin: 2rem auto;
@@ -51,29 +40,25 @@ body, html {
   width: 80%;
   height: 20rem;
   align-items: center;
-  /* box-shadow: 3px 2px 15px .1px grey; */
 }
 
 .current-question {
-  /* position: absolute; */
-  margin: 0 5rem;
-  padding: 1rem;
-  font-size: 1.75rem;
-  font-weight: 800;
-  width: 100vw;
-  align-self: center;
-  justify-content: center;
-  text-align: center;
-  color: rgb(18, 58, 51);
-  font-size: 1.5rem;
+  width: auto;
+  height: 38px;
+
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 37px;
+  /* identical to box height */
+
+  color: #272727;
 }
 
 .choices-container {
   display: flex;
   width: auto;
-  display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
 }
 
 @media screen and (max-width: 1000px) {
@@ -91,7 +76,6 @@ body, html {
 
   .current-question {
     margin: 0 10rem;
-    /* margin: 0 5rem 0 5rem; */
     padding: 0 5rem 0 5rem;
   }
 

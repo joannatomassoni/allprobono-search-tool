@@ -1,9 +1,29 @@
 .results-container {
   display: flex;
   flex-direction: column;
-  margin: 1rem auto;
+  position: relative;
+  justify-content: center;
+  margin: 5rem auto;
+  padding: 5rem 0;
+  top: 18rem;
+  width: 80%;
+  height: auto;
+  align-items: center;
 }
 
 .results-container h2 {
-  margin: .5rem auto;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 109px;
+  height: 38px;
+
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 37px;
+  /* identical to box height */
+
+
+  color: #272727;
 }
