@@ -1,38 +1,53 @@
-.modal-container {
+.open-btn {
   position: absolute;
-  transition: all 0.4s ease;
-  top: '50%';
-  left: '50%';
-  right: 'auto';
-  bottom: 'auto';
-  margin-right: '-50%';
-  transform: 'translate(-50%, -50%)';
-  display: flex;
-  justify-content: center;
+  bottom: 0;
+  left: 0;
+  border: none;
 }
 
-.open-btn {
-  margin: 0 auto;
-  align-self: center;
-  /* justify-content: center; */
-  padding: 1rem;
-  border-radius: 12px;
-  color: rgba(1, 92, 104, 0.795);
-  font-size: 1rem;
-  font-weight: bold;
-  background-color: rgba(231, 250, 242, 0.74);
-  text-align: center;
-  /* position: fixed; */
+.open-btn::before {
+  border-left: 350px solid #C0C0C0; 
+  border-top: 225px solid transparent; 
+  position: absolute;
+  bottom: -10px;
+  left: -18px;
+  content: ' ';
+  z-index: 0;
+}
+
+.open-btn-text {
+  color: white;
+  width: 124px;
+  margin-left: 14px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  text-align: left;
+}
+
+.open-btn-text p {
+  color: white;
+  position: relative;
+  width: 150px;
+  margin-left: .74rem;
+  margin-bottom: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+}
+
+.plus {
+  position: relative;
+  color: #FFFFFF;
+  margin-left: .75rem;
 }
 
 .open-btn:hover {
-  background-color: rgba(204, 250, 231, 0.74);
   cursor: pointer;
 }
 
 .close-btn {
   position: absolute;
-  right: 0;
+  right: 5px;
   top: 0;
   width: 2rem;
   height: 2rem;
@@ -78,9 +93,9 @@
   text-align: center;
 }
 
-.modal-text p a{
+.modal-text p a {
   text-decoration: none;
-  color: rgb(5, 90, 86);
+  color: #8A0303;
   font-weight: 700;
 }
 

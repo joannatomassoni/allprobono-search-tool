@@ -57,10 +57,11 @@ class App extends React.Component {
       currentQuestion: 'Do you need funding, or are you looking to donate?',
       currentChoices: ['Looking for funds', 'Looking to donate'],
       counter: 0,
+      results: orgData
     })
   }
 
-  handleGeResults = () => {
+  handleGetResults = () => {
     this.setState({
       results: [orgData]
     })

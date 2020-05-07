@@ -17,17 +17,14 @@
 }
 
 .result-container:hover {
-  background-color: #8A0303;
+  background-color: rgba(138, 3, 3, 0.685);
   color: white;
 }
 
-.name {
-  text-transform: uppercase;
-}
-
 .name a {
+  text-transform: uppercase;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 700;
   color: inherit;
 }
 

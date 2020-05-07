@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './ReactModal.css'
- 
+import { FaPlusCircle } from 'react-icons/fa'
+
 Modal.setAppElement('#root')
  
 const ReactModal = () => {
@@ -16,8 +17,13 @@ const ReactModal = () => {
   }
  
     return (
-      <div>
-        <button onClick={openModal} className='open-btn'>Want to add your organization to our database?</button>
+      <div className='container'>
+        <button onClick={openModal} className='open-btn'>
+          <div className='open-btn-text'>
+            <FaPlusCircle className='plus'/>
+            <p>Want to add your organization to our database?</p>
+          </div>
+        </button>
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
