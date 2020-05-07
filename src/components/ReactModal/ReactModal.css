@@ -6,7 +6,7 @@
 }
 
 .open-btn::before {
-  border-left: 350px solid #C0C0C0; 
+  border-left: 350px solid rgb(158, 157, 157); 
   border-top: 225px solid transparent; 
   position: absolute;
   bottom: -10px;
