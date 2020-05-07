@@ -3,7 +3,7 @@ const orgData = [
     id: 1,
     name: 'All Pro Bono',
     url: 'https://allprobono.com/',
-    description: 'Donation aggregator -- All Probono is a website that lists links and helps find funding for projects related to COVID-19.',
+    description: 'All Probono is a donation aggregator that lists links and helps find funding for projects related to COVID-19.',
     metadata: {
       'Do you need funding, or are you looking to donate?': 'Looking to donate',
       'Is tax-exemption important to you?': ['Yes', 'No'],
