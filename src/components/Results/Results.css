@@ -1,9 +1,8 @@
 .results-container {
   display: flex;
   flex-direction: column;
-  position: relative;
   justify-content: center;
-  margin: 5rem auto;
+  margin: 4rem auto;
   padding: 5rem 0;
   top: 18rem;
   width: 80%;
