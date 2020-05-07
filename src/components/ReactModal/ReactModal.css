@@ -29,7 +29,7 @@
   position: relative;
   width: 150px;
   margin-left: .74rem;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   font-size: 16px;
   font-weight: 700;
   text-align: left;
@@ -39,6 +39,7 @@
   position: relative;
   color: #FFFFFF;
   margin-left: .75rem;
+  margin-bottom: -.5rem;
 }
 
 .open-btn:hover {
