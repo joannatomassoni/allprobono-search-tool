@@ -1,11 +1,13 @@
 import React from 'react'
 import './Header.css'
+import logo from '../Logo-1.png'
 
 const Header = ({ handleHeaderClick }) => {
   return (
     <div className='header'>
-      <button onClick={handleHeaderClick}>COVID Financial Roadmap</button>
-      <div className='line'></div>
+      <button>
+        <img src={logo} alt='logo' onClick={handleHeaderClick}/>
+      </button>
     </div>
     
   )
