@@ -1,3 +1,39 @@
+/**
+ * DEVELOPERS: add your organization here.
+ * 
+ * Fill in the metadata property as follows, *removing any answers in the arrays that do not pertain to you* 
+ * 
+ * For organizations looking for funding:
+ * metadata: {
+      'Do you need funding, or are you looking to donate?': 'Looking for funds',
+      'Grants or donations?': ['Looking for grants', 'Looking for donations'],
+      'What type of organization do you represent?': ['Academic', 'Non-profit','For-profit'],
+      'Where are you located?': ['US','EU']
+    }
+ *
+ * For organizations looking to donate:
+ * metadata: {
+      'Do you need funding, or are you looking to donate?': 'Looking to donate',
+      'Is tax-exemption important to you?': ['Yes', 'No'],
+      'How much money are you trying to donate?': ['Less than $500', 'Between $500 and $10,000', '$10,000 or more'],
+      'Where are you located?': ['US','EU']
+    }
+ * 
+ * i.e., I'm from XYZ Org, a non-profit looking for funding (either grants or donations) in the EU. My org's metadata property would look like this:
+ * metadata: {
+      'Do you need funding, or are you looking to donate?': 'Looking for funds',
+      'Grants or donations?': ['Looking for grants', 'Looking for donations'],
+      'What type of organization do you represent?': ['Non-profit'],
+      'Where are you located?': ['EU']
+    }
+
+ *
+ * Note that I kept both array elements in 'Grants or donations' but removed the irrelevant ones from 'What type of organization do you represent?'
+ * 
+ * 
+ * 
+ */
+
 const orgData = [
   {
     id: 1,
@@ -20,7 +56,8 @@ const orgData = [
       'Do you need funding, or are you looking to donate?': 'Looking for funds',
       'Grants or donations?': ['Looking for grants'],
       'What type of organization do you represent?': ['Academic'],
-      'Where are you located?': ['US','EU']    }
+      'Where are you located?': ['US','EU']    
+    }
   },
   {
     id: 3,
