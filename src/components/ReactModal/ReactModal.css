@@ -6,7 +6,7 @@
 }
 
 .open-btn::before {
-  border-left: 350px solid rgba(138, 3, 3, 0.5);; 
+  border-left: 350px solid rgba(138, 3, 3, 0.5); 
   border-top: 225px solid transparent; 
   position: absolute;
   bottom: -10px;
@@ -39,7 +39,7 @@
   position: relative;
   color: #FFFFFF;
   margin-left: .75rem;
-  margin-bottom: -.5rem;
+  padding-bottom: .5rem;
 }
 
 .open-btn:hover {
@@ -79,7 +79,7 @@
 
 .modal {
   position: fixed;
-  top: 50%;
+  top: 47%;
   left: 50%;
   margin: 0;
   padding: 2rem;
@@ -88,14 +88,17 @@
   transform: translate(-50%,-50%);
   display: flex;
   justify-content: space-evenly;
-  /* align-items: center; */
   background-color: white;
   box-shadow: 1px 2px 5px grey;
   text-align: center;
+  border: 1px solid rgb(138, 3, 3);
 }
 
 .modal-text {
   text-align: left;
+  font-family: sans-serif;
+  padding-top: 1rem;
+  font-size: 18px;
 }
 
 .modal-text p a {
