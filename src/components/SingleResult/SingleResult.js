@@ -12,8 +12,10 @@ const SingleResult = ({ result }) => {
   rowClass = rowClass + ' result-container'
   return (
     <div className={rowClass}>
-      <div className='name result-item'><a href={result.url} target='_blank' rel='noopener noreferrer'>{result.name}</a></div>
+      <a href={result.url} target='_blank' rel='noopener noreferrer'>
+      <div className='name result-item'>{result.name}</div>
       <div className='desc result-item'>{result.description}</div>
+      </a>
     </div>
   )
 }
