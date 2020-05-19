@@ -42,7 +42,7 @@ const orgData = [
     description: 'All Probono is a donation aggregator that lists links and helps find funding for projects related to COVID-19.',
     metadata: {
       'Do you need funding, or are you looking to donate?': 'Looking to donate',
-      'Is tax-exemption important to you?': ['Yes', 'No'],
+      'Is tax-exemption important to you?': ['Yes', 'No', 'Not sure'],
       'How much money are you trying to donate?': ['Less than $500', 'Between $500 and $10,000', '$10,000 or more'],
       'Where are you located?': ['US','EU']
     }

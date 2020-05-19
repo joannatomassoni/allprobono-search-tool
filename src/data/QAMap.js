@@ -3,9 +3,10 @@
 const QAMap = new Map([
   ['Do you need funding, or are you looking to donate?', ['Looking for funds', 'Looking to donate']],
   ['Looking to donate', 'Is tax-exemption important to you?'],
-  ['Is tax-exemption important to you?', ['Yes', 'No']],
+  ['Is tax-exemption important to you?', ['Yes', 'No', 'Not sure']],
   ['Yes', 'How much money are you trying to donate?'],
   ['No', 'How much money are you trying to donate?'],
+  ['Not sure', 'How much money are you trying to donate?'],
   ['How much money are you trying to donate?', ['Less than $500', 'Between $500 and $10,000', '$10,000 or more']],
 
   ['Looking for funds', 'Grants or donations?'],
