@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import logo from '../Logo-1.png'
+import logo from '../logos/Header-Logo.png'
 
 const Header = ({ handleHeaderClick }) => {
   return (
