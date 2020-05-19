@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.css'
 import ChoiceButton from './components/ChoiceButton'
-import BackButton from './components/BackButton'
+import StartOverButton from './components/StartOverButton'
 import Results from './components/Results'
 import QAMap from './data/QAMap'
 import orgData from './data/orgData'
 import filterOrgs from './data/filterOrgs'
 import ReactModal from './components/ReactModal'
 import Header from './components/Header'
-import Footer from './components/Footer'
 
 class App extends React.Component {
   constructor() {
@@ -49,7 +48,6 @@ class App extends React.Component {
         counter: counter - 1
       })
     }
-    // splice off last element in results array
   }
 
   handleHeaderClick = () => {
@@ -84,11 +82,10 @@ class App extends React.Component {
                   )
                 })}
               </div>
-              <BackButton handleBackArrowClick={this.handleBackArrowClick} currentQuestion={currentQuestion}/>
+              <StartOverButton handleStartOver={this.handleHeaderClick} currentQuestion={currentQuestion}/>
             </div>
           </div>
           <ReactModal/>
-          {/* <Footer/> */}
         </div>
       )
     } else {
@@ -99,10 +96,9 @@ class App extends React.Component {
           <div className='main-content'>
             <Results results={results}/>
           </div>
-            <BackButton handleBackArrowClick={this.handleBackArrowClick} currentQuestion={currentQuestion}/>
+          <StartOverButton handleStartOver={this.handleHeaderClick} currentQuestion={currentQuestion} />
 
           <ReactModal/>
-          {/* <Footer/> */}
         </div>
       )
     }
