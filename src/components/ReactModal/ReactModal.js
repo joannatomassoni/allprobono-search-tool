@@ -18,8 +18,8 @@ const ReactModal = () => {
  
     return (
       <div className='container'>
-        <button onClick={openModal} className='open-btn'>
-          <div className='open-btn-text'>
+        <button className='open-btn'>
+          <div className='open-btn-text' onClick={openModal}>
             <FaPlusCircle className='plus'/>
             <p>Want to add your organization to our database?</p>
           </div>

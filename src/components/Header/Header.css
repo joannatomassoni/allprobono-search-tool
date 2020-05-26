@@ -29,6 +29,7 @@
 @media screen and (max-width: 1000px) {
   .header button {
     font-size: 15px;
+    background-color: inherit;
   }
 
   .line {

@@ -4,11 +4,11 @@ import './StartOverButton.css'
 const StartOverButton = ({ handleStartOver, currentQuestion }) => {
   if (currentQuestion !== 'Do you need funding, or are you looking to donate?') {
     return (
-      <button className='back-btn' onClick={handleStartOver}>Start Over</button>
+      <button className='start-over-btn' onClick={handleStartOver}>Start Over</button>
     )
   } else {
     return (
-      <button className='back-btn'>   </button>
+      <button className='start-over-btn'>   </button>
     );
   }
 }

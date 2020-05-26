@@ -1,4 +1,4 @@
-.back-btn {
+.start-over-btn {
 margin: 2rem;
 border: none;
 font-family: sans-serif;
@@ -12,11 +12,16 @@ text-transform: uppercase;
 color: #BCBCBC;
 }
 
-.back-btn:hover {
+.start-over-btn:hover {
   color: rgb(117, 116, 116);
   cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
-  .back-arrow { width: 40% }
+  .start-over-btn { 
+    z-index: 1;
+    width: 40%;
+    background-color: inherit;
+  }
 }
+
