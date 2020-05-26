@@ -1,7 +1,9 @@
 /**
  * DEVELOPERS: add your organization here.
  * 
- * Fill in the metadata property as follows, *removing any answers in the arrays that do not pertain to you* 
+ * Fill in the metadata property as follows, *removing any answers in the arrays that do not pertain to your organization*.
+ * 
+ * Reach out to Joanna for any questions.
  * 
  * For organizations looking for funding:
  * metadata: {
@@ -29,7 +31,6 @@
 
  *
  * Note that I kept both array elements in 'Grants or donations' but removed the irrelevant ones from 'What type of organization do you represent?'
- * 
  * 
  * 
  */
